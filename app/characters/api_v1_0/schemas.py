@@ -16,9 +16,8 @@ class CharacterSchema(ma.Schema):
     status = fields.String()
     origin = fields.String()
     crew_id = fields.String()
-    devil_fruit_id = fields.Nested('DevilFruitsSchema', many=False)
+    devilfruit = fields.String()
 
 class DevilFruitSchema(ma.Schema):
     id = fields.Integer(dump_only=True)
     name = fields.String()
-    status = fields.String()
